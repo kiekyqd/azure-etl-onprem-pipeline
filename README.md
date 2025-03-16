@@ -45,4 +45,25 @@ Dataset Download Link:  [AdventureWorksLT2022.bak - Microsoft Docs](https://lear
 ##  Architecture Diagram
 ![diagram](https://github.com/user-attachments/assets/645ec48c-fdf3-4aed-97dd-f0cb3633ecf8)
 
+## Implementation Steps
+### Step 1: Setting Up Azure Environment  
+- **Create a Resource Group** to efficiently manage Azure services.  
+- **Set Up Required Services**:  
+  - **Azure Data Factory (ADF)** → Automates data movement.  
+  - **Azure Data Lake Storage (ADLS)** → Configured with separate containers:  
+    - **Bronze Layer** → Stores raw, unprocessed data.  
+    - **Silver Layer** → Stores transformed data.  
+    - **Gold Layer** → Stores final data for **Power BI**.  
+  - **Azure Databricks** → Used for scalable data processing:  
+    - **Set up a Databricks Workspace**.  
+    - **Set up a Cluster** optimized for the data.  
+    - Use **fixed worker nodes** to balance cost and performance.  
+    - Enable **Auto-Termination** to shut down inactive clusters.  
+  - **Azure Synapse Analytics** → Stores **Gold Layer data** for efficient querying and reporting.  
+  - **Azure Key Vault** → Securely manages **secrets** (e.g., Databricks tokens, passwords, usernames).  
+
+
+
+
+
 
