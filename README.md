@@ -19,3 +19,21 @@ This dashboard should:
 
 By implementing this solution, stakeholders can make data-driven decisions and better understand how customer demographics influence sales performance.
 
+## Technology Used
+1. **Cloud Platform - Microsoft Azure**  
+   - **Azure Data Factory (ADF)** – Manages and automates data movement between different services, ensuring seamless ETL (Extract, Transform, Load) workflows. 
+   - **Azure Data Lake Storage (ADLS)** – Serves as a centralized repository for storing both raw and processed data at different stages of the pipeline.
+   - **Azure Databricks** – Provides a scalable environment for processing and transforming data using PySpark and distributed computing.
+   - **Azure Synapse Analytics** – Creates and manages serverless SQL views, executes SQL queries for data retrieval, and orchestrates data processing through Synapse pipelines for structured data integration with Power BI.
+   - **Azure Key Vault** – Securely stores and manages authentication credentials, such as secrets and tokens, used for accessing Azure services. 
+
+2. **Programming & Querying**  
+   - **Python (PySpark)** - Used in Databricks notebooks for:
+     - **Mounting Storage Containers** (`storagemount.py`)
+     - **Transforming Bronze to Silver Layer** (`Bronze layer to Silver Layer.py`)
+     - **Transforming Silver to Gold Layer** (`Silver layer to Gold layer.py`)
+   - **SQL (T-SQL)** - Used for querying structured data in SSMS  
+
+3. **Visualization & Reporting**  
+   - **Power BI** - Data visualization and interactive reporting  
+
