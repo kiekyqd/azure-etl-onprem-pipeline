@@ -37,8 +37,10 @@ By implementing this solution, stakeholders can make data-driven decisions and b
 3. **Visualization & Reporting**  
    - **Power BI** - Data visualization and interactive reporting
 
- ## Data Source (On-Premises)
+## Data Source (On-Premises)
 For this project, I used the **Lightweight version of AdventureWorksLT2022**, a sample database provided by Microsoft.  
 
 Dataset Download Link:  [AdventureWorksLT2022.bak - Microsoft Docs](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms)  
+
+##  Architecture Diagram
 
