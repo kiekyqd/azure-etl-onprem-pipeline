@@ -58,7 +58,17 @@ Dataset Download Link:  [AdventureWorksLT2022.bak - Microsoft Docs](https://lear
   - Use **fixed worker nodes** to balance cost and performance.  
   - Enable **Auto-Termination** to shut down inactive clusters.  
 - **Set up Azure Synapse Analytics** to store and query **Gold Layer data** efficiently.  
-- **Configure Azure Key Vault** to store and manage secrets securely.   
+- **Configure Azure Key Vault** to store and manage secrets securely.
+
+### Step 2: Data Ingestion  
+- **Prepare SQL Server**  
+  - Install **SQL Server** and **SQL Server Management Studio (SSMS)**.  
+  - Restore the **AdventureWorks database** as the primary data source.  
+- **Load Data into Azure**  
+  - Use **Self-Hosted Integration Runtime (SHIR)** in ADF to connect to SQL Server.  
+  - Create **Linked Services and Datasets** to define the data source and destination in ADLS.  
+  - Develop **ADF pipelines** to extract data and load it into the **Bronze Layer** of ADLS.  
+   
 
 
 
