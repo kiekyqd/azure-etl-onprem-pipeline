@@ -43,4 +43,6 @@ For this project, I used the **Lightweight version of AdventureWorksLT2022**, a 
 Dataset Download Link:  [AdventureWorksLT2022.bak - Microsoft Docs](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms)  
 
 ##  Architecture Diagram
-![Diagram](https://github.com/user-attachments/assets/04253561-1052-49a0-a132-b8824afba3ab)
+![diagram](https://github.com/user-attachments/assets/645ec48c-fdf3-4aed-97dd-f0cb3633ecf8)
+
+
