@@ -47,20 +47,18 @@ Dataset Download Link:  [AdventureWorksLT2022.bak - Microsoft Docs](https://lear
 
 ## Implementation Steps
 ### Step 1: Setting Up Azure Environment  
-- **Create a Resource Group** to efficiently manage Azure services.  
-- **Set Up Required Services**:  
-  - **Azure Data Factory (ADF)** → Automates data movement.  
-  - **Azure Data Lake Storage (ADLS)** → Configured with separate containers:  
-    - **Bronze Layer** → Stores raw, unprocessed data.  
-    - **Silver Layer** → Stores transformed data.  
-    - **Gold Layer** → Stores final data for **Power BI**.  
-  - **Azure Databricks** → Used for scalable data processing:  
-    - **Set up a Databricks Workspace**.  
-    - **Set up a Cluster** optimized for the data.  
-    - Use **fixed worker nodes** to balance cost and performance.  
-    - Enable **Auto-Termination** to shut down inactive clusters.  
-  - **Azure Synapse Analytics** → Stores **Gold Layer data** for efficient querying and reporting.  
-  - **Azure Key Vault** → Securely manages **secrets** (e.g., Databricks tokens, passwords, usernames).  
+- **Create a Resource Group** to organize and manage all Azure resources.  
+- **Deploy Azure Data Factory (ADF)** to orchestrate data movement and pipeline automation.  
+- **Set up Azure Data Lake Storage (ADLS)** with structured containers:  
+  - **Bronze Layer** → Stores raw, unprocessed data.  
+  - **Silver Layer** → Stores transformed data.  
+  - **Gold Layer** → Stores final data for **Power BI** and reporting.  
+- **Create an Azure Databricks workspace** for scalable data processing:  
+  - **Set up a Cluster** optimized for workload needs.  
+  - Use **fixed worker nodes** to balance cost and performance.  
+  - Enable **Auto-Termination** to shut down inactive clusters.  
+- **Set up Azure Synapse Analytics** to store and query **Gold Layer data** efficiently.  
+- **Configure Azure Key Vault** to store and manage secrets securely.   
 
 
 
