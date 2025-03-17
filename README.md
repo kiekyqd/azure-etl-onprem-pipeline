@@ -61,14 +61,41 @@ Dataset Download Link:  [AdventureWorksLT2022.bak - Microsoft Docs](https://lear
 - **Configure Azure Key Vault** to store and manage secrets securely.
 
 ### Step 2: Data Ingestion  
-- **Prepare SQL Server**  
-  - Install **SQL Server** and **SQL Server Management Studio (SSMS)**.  
-  - Restore the **AdventureWorks database** as the primary data source.  
-- **Load Data into Azure**  
-  - Use **Self-Hosted Integration Runtime (SHIR)** in ADF to connect to SQL Server.  
-  - Create **Linked Services and Datasets** to define the data source and destination in ADLS.  
-  - Develop **ADF pipelines** to extract data and load it into the **Bronze Layer** of ADLS.  
-   
+#### 2.1 Setup On-Premises SQL Server  
+- Install **SQL Server** and **SQL Server Management Studio (SSMS)**.  
+- Restore the **AdventureWorksLT2022** database as the source.  
+#### 2.2 Configure Linked Services in Azure Data Factory (ADF)  
+- Create **Linked Services** to connect:  
+  - **On-Prem SQL Server** (via Self-Hosted Integration Runtime - SHIR).  
+  - **Azure Data Lake Storage (ADLS)** for raw data storage.  
+  - **Azure Key Vault** to securely store secrets for connecting ADLS with SSMS.  
+#### 2.3 Build ADF Pipeline for Data Ingestion  
+- **Lookup Activity**: Fetch table metadata from SQL Server.  
+- **ForEach Activity**: Loop through each table dynamically.  
+- **Copy Data Activity**: Transfer data from SQL Server → **ADLS (Bronze Layer)**.  
+
+![ADF pipeline](https://github.com/user-attachments/assets/8a7ca00f-2ae5-45d5-83ed-55628d7ce107)
+
+### Step 3: Data Transformation  
+
+#### 3.1 Establish Connection in Databricks  
+- **Mount ADLS** in Databricks to access **Bronze Layer** data.  
+
+#### 3.2 Process and Refine Data  
+
+**Bronze → Silver Layer**  
+- Convert date formats to `YYYY-MM-DD` for consistency.  
+- Store processed data in **Delta format** for efficient updates.  
+
+**Silver → Gold Layer**  
+- Rename columns (e.g., `CustomerID → customer_id`) for readability.  
+- Save refined data in **Delta format** to enable fast querying.  
+
+
+
+
+
+
 
 
 
