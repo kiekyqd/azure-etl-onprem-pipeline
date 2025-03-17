@@ -110,11 +110,32 @@ Dataset Download Link:  [AdventureWorksLT2022.bak - Microsoft Docs](https://lear
 ![dashboard](https://github.com/user-attachments/assets/27a9885f-c973-47d0-8546-10a5321ce645)
 
 
+### Step 5: Automation, Monitoring, and Testing  
 
+#### 5.1 Schedule and Automate Pipelines  
+- Configure **ADF Triggers** to automate pipeline execution at scheduled intervals (e.g., daily).  
 
+#### 5.2 Monitor Pipeline Performance  
+- Use **ADF and Synapse monitoring tools** to track pipeline execution and identify failures.  
 
+#### 5.3 End-to-End Testing  
+- Insert **test records** into SQL Server and trigger the pipeline.  
+- Validate that data flows correctly **from ingestion to transformation to reporting**.  
+- Confirm that the **Power BI dashboard updates correctly** with new data.  
 
+### Step 6: Security and Access Control  
 
+- Use **Microsoft Entra ID** (formerly Azure Active Directory) to manage user access.  
+- Create a **security group** and assign **appropriate role-based permissions**.  
+- Navigate to **Azure Portal → Resource Group → Access Control (IAM)**.  
+- Manage permissions via **Role Assignments**, granting roles like **Contributor** as needed.  
+- Restrict access to sensitive resources by assigning users to the correct security group.  
+
+## Conclusion  
+
+As my first project in **Azure Data Engineering**, this implementation provided valuable hands-on experience in **building an automated data pipeline** from on-premises SQL Server to the cloud. Through this process, I gained practical knowledge of **Azure Data Factory, Databricks, Synapse Analytics, and Power BI**, integrating them to deliver **actionable insights** for business decision-making.  
+
+This project not only enhanced my technical skills but also demonstrated how **cloud-based data solutions** can streamline data processing and improve reporting efficiency. Moving forward, I aim to explore **real-time data processing and performance optimization techniques** to further enhance my expertise in data engineering.
 
 
 
