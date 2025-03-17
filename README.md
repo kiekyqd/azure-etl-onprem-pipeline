@@ -79,9 +79,10 @@ Dataset Download Link:  [AdventureWorksLT2022.bak - Microsoft Docs](https://lear
 ### Step 3: Data Transformation  
 
 #### 3.1 Establish Connection in Databricks  
-- **Mount ADLS** in Databricks to access **Bronze Layer** data.  
+- **Mount ADLS** in Databricks to access **Bronze, Silver, and Gold Layers**.  
+- Secure connection between **ADF and Databricks** is managed via **Linked Services & Azure Key Vault**.
 
-#### 3.2 Process and Refine Data  
+#### 3.2 Process and Refine Data Using Databricks Notebooks  
 
 **Bronze → Silver Layer**  
 - Convert date formats to `YYYY-MM-DD` for consistency.  
@@ -91,6 +92,22 @@ Dataset Download Link:  [AdventureWorksLT2022.bak - Microsoft Docs](https://lear
 - Rename columns (e.g., `CustomerID → customer_id`) for readability.  
 - Save refined data in **Delta format** to enable fast querying.  
 
+### Step 4: Data Loading and Reporting  
+#### 4.1 Load Data into Azure Synapse Analytics  
+- Use **ADF Get Metadata Activity** to retrieve table names from the **Gold Layer** in ADLS.  
+- Iterate through tables dynamically using **ForEach Activity**.  
+- Execute a **Stored Procedure** in Synapse to create **SQL Serverless Views** using `OPENROWSET`.  
+
+![pipeline in synapse](https://github.com/user-attachments/assets/c14c6a72-1b61-4d02-98b2-8cd50b481db7)
+
+#### 4.2 Build Power BI Dashboard  
+**Connect Power BI to Synapse**  
+- Install **Power BI Desktop** and connect to **Azure Synapse Analytics**.  
+**Design Power BI Reports**  
+- Create **data models** and define **table relationships**.  
+- Build **interactive visualizations** to meet business requirements. 
+
+![dashboard](https://github.com/user-attachments/assets/27a9885f-c973-47d0-8546-10a5321ce645)
 
 
 
